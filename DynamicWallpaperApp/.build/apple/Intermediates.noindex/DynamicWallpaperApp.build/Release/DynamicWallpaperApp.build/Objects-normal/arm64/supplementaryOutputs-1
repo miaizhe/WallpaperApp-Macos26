@@ -1,0 +1,11 @@
+{
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/DerivedSources/resource_bundle_accessor.swift" : {
+    "abi-baseline-json" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/arm64/DynamicWallpaperApp.abi.json",
+    "const-values" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/arm64/DynamicWallpaperApp-primary.swiftconstvalues",
+    "dependencies" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/arm64/DynamicWallpaperApp-primary.d",
+    "diagnostics" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/arm64/DynamicWallpaperApp-primary.dia",
+    "swiftdoc" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/arm64/DynamicWallpaperApp.swiftdoc",
+    "swiftmodule" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/arm64/DynamicWallpaperApp.swiftmodule",
+    "swiftsourceinfo" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/arm64/DynamicWallpaperApp.swiftsourceinfo"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "": {
+    "dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/DynamicWallpaperApp.d",
+    "object": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/DynamicWallpaperApp.o",
+    "swift-dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/master.swiftdeps"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/Sources/ContentView.swift": {
+    "object": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/ContentView.swift.o",
+    "swiftmodule": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/ContentView.swiftdeps",
+    "diagnostics": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/ContentView.dia"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/Sources/DynamicWallpaperApp.swift": {
+    "object": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/DynamicWallpaperApp.swift.o",
+    "swiftmodule": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/DynamicWallpaperApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/DynamicWallpaperApp.swiftdeps",
+    "diagnostics": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/DynamicWallpaperApp.dia"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/Sources/SettingsView.swift": {
+    "object": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/SettingsView.swift.o",
+    "swiftmodule": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/SettingsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/SettingsView.swiftdeps",
+    "diagnostics": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/SettingsView.dia"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/Sources/StatusBarController.swift": {
+    "object": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/StatusBarController.swift.o",
+    "swiftmodule": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/StatusBarController~partial.swiftmodule",
+    "swift-dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/StatusBarController.swiftdeps",
+    "diagnostics": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/StatusBarController.dia"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/Sources/WallpaperManager.swift": {
+    "object": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/WallpaperManager.swift.o",
+    "swiftmodule": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/WallpaperManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/WallpaperManager.swiftdeps",
+    "diagnostics": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/WallpaperManager.dia"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/Sources/WallpaperWindow.swift": {
+    "object": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/WallpaperWindow.swift.o",
+    "swiftmodule": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/WallpaperWindow~partial.swiftmodule",
+    "swift-dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/WallpaperWindow.swiftdeps",
+    "diagnostics": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/release/DynamicWallpaperApp.build/WallpaperWindow.dia"
+  }
+}

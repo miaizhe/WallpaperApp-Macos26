@@ -1,0 +1,54 @@
+{
+  "": {
+    "swift-dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/master.swiftdeps"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/Sources/ContentView.swift": {
+    "dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/ContentView.d",
+    "object": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/ContentView.swift.o",
+    "swiftmodule": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/ContentView.swiftdeps",
+    "diagnostics": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/ContentView.dia"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/Sources/DynamicWallpaperApp.swift": {
+    "dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/DynamicWallpaperApp.d",
+    "object": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/DynamicWallpaperApp.swift.o",
+    "swiftmodule": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/DynamicWallpaperApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/DynamicWallpaperApp.swiftdeps",
+    "diagnostics": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/DynamicWallpaperApp.dia"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/Sources/SettingsView.swift": {
+    "dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/SettingsView.d",
+    "object": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/SettingsView.swift.o",
+    "swiftmodule": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/SettingsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/SettingsView.swiftdeps",
+    "diagnostics": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/SettingsView.dia"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/Sources/StatusBarController.swift": {
+    "dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/StatusBarController.d",
+    "object": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/StatusBarController.swift.o",
+    "swiftmodule": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/StatusBarController~partial.swiftmodule",
+    "swift-dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/StatusBarController.swiftdeps",
+    "diagnostics": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/StatusBarController.dia"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/Sources/WallpaperManager.swift": {
+    "dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/WallpaperManager.d",
+    "object": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/WallpaperManager.swift.o",
+    "swiftmodule": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/WallpaperManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/WallpaperManager.swiftdeps",
+    "diagnostics": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/WallpaperManager.dia"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/Sources/WallpaperWindow.swift": {
+    "dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/WallpaperWindow.d",
+    "object": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/WallpaperWindow.swift.o",
+    "swiftmodule": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/WallpaperWindow~partial.swiftmodule",
+    "swift-dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/WallpaperWindow.swiftdeps",
+    "diagnostics": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/WallpaperWindow.dia"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/DerivedSources/resource_bundle_accessor.swift": {
+    "dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/resource_bundle_accessor.d",
+    "object": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/resource_bundle_accessor.swift.o",
+    "swiftmodule": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/resource_bundle_accessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/resource_bundle_accessor.swiftdeps",
+    "diagnostics": "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/x86_64-apple-macosx/debug/DynamicWallpaperApp.build/resource_bundle_accessor.dia"
+  }
+}

@@ -1,0 +1,7 @@
+Target dependency graph (3 targets)
+Target 'AllExcludingTests' in project 'Aggregate'
+➜ Explicit dependency on target 'DynamicWallpaperApp_-5809789076882B5F_PackageProduct' in project 'DynamicWallpaperApp'
+➜ Explicit dependency on target 'DynamicWallpaperApp_DynamicWallpaperApp' in project 'DynamicWallpaperApp'
+Target 'DynamicWallpaperApp_-5809789076882B5F_PackageProduct' in project 'DynamicWallpaperApp'
+➜ Explicit dependency on target 'DynamicWallpaperApp_DynamicWallpaperApp' in project 'DynamicWallpaperApp'
+Target 'DynamicWallpaperApp_DynamicWallpaperApp' in project 'DynamicWallpaperApp' (no dependencies)
