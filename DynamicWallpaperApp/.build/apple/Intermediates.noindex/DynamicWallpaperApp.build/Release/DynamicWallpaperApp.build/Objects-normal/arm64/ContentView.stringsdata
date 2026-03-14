@@ -6,64 +6,64 @@
         "comment": "",
         "key": "Liquid Wall",
         "location": {
-          "startingColumn": 34,
-          "startingLine": 88
+          "startingColumn": 38,
+          "startingLine": 89
         }
       },
       {
         "comment": "",
         "key": "v1.2",
         "location": {
-          "startingColumn": 34,
-          "startingLine": 93
+          "startingColumn": 38,
+          "startingLine": 94
         }
       },
       {
         "comment": "",
         "key": "No Wallpaper",
         "location": {
-          "startingColumn": 42,
-          "startingLine": 164
+          "startingColumn": 46,
+          "startingLine": 165
         }
       },
       {
         "comment": "",
         "key": "Import",
         "location": {
-          "startingColumn": 42,
-          "startingLine": 177
+          "startingColumn": 46,
+          "startingLine": 178
         }
       },
       {
         "comment": "",
         "key": "Settings",
         "location": {
-          "startingColumn": 34,
-          "startingLine": 220
+          "startingColumn": 38,
+          "startingLine": 221
         }
       },
       {
         "comment": "",
         "key": "Library",
         "location": {
-          "startingColumn": 26,
-          "startingLine": 249
+          "startingColumn": 30,
+          "startingLine": 250
         }
       },
       {
         "comment": "",
         "key": "No wallpapers imported yet",
         "location": {
-          "startingColumn": 30,
-          "startingLine": 266
+          "startingColumn": 34,
+          "startingLine": 267
         }
       },
       {
         "comment": "",
         "key": "Remove",
         "location": {
-          "startingColumn": 51,
-          "startingLine": 287
+          "startingColumn": 55,
+          "startingLine": 288
         }
       }
     ]

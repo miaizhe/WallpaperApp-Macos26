@@ -77,281 +77,295 @@ struct ContentView: View {
     @State private var isSidebarExpanded = true
     
     var body: some View {
-        // Main Content with Sidebar
-        HStack(spacing: 0) {
-            // MARK: - LEFT SIDEBAR
-            if isSidebarExpanded {
-                VStack(spacing: 20) {
-                    // Header
-                    HStack {
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text("Liquid Wall")
-                                .font(.system(size: 20, weight: .bold, design: .rounded))
-                                .foregroundStyle(.white)
-                                .shadow(radius: 2)
+        ZStack {
+            // Main Content with Sidebar
+            HStack(spacing: 0) {
+                // MARK: - LEFT SIDEBAR
+                if isSidebarExpanded {
+                    VStack(spacing: 20) {
+                        // Header
+                        HStack {
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("Liquid Wall")
+                                    .font(.system(size: 20, weight: .bold, design: .rounded))
+                                    .foregroundStyle(.white)
+                                    .shadow(radius: 2)
+                                
+                                Text("v1.2")
+                                    .font(.caption2)
+                                    .foregroundStyle(.white.opacity(0.6))
+                            }
                             
-                            Text("v1.2")
-                                .font(.caption2)
-                                .foregroundStyle(.white.opacity(0.6))
-                        }
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            withAnimation {
-                                isSidebarExpanded.toggle()
-                            }
-                        }) {
-                            Image(systemName: "sidebar.left")
-                                .foregroundColor(.white.opacity(0.7))
-                        }
-                        .buttonStyle(.plain)
-                    }
-                    .padding(.top, 20)
-                    .padding(.horizontal)
-                    
-                    // Main Action Card
-                    GlassCard {
-                        VStack(spacing: 15) {
-                            if let currentURL = wallpaperManager.currentWallpaperURL {
-                                VStack(spacing: 8) {
-                                    Image(systemName: "film.fill")
-                                        .font(.system(size: 24))
-                                        .foregroundStyle(.secondary)
-                                    
-                                    Text(currentURL.lastPathComponent)
-                                        .font(.caption)
-                                        .foregroundStyle(.secondary)
-                                        .multilineTextAlignment(.center)
-                                        .lineLimit(2)
-                                    
-                                    // Playback Controls
-                                    HStack(spacing: 20) {
-                                        Button(action: {
-                                            withAnimation {
-                                                wallpaperManager.isPlaying.toggle()
-                                            }
-                                        }) {
-                                            Image(systemName: wallpaperManager.isPlaying ? "pause.circle.fill" : "play.circle.fill")
-                                                .font(.system(size: 40))
-                                                .foregroundColor(.blue.opacity(0.8))
-                                        }
-                                        .buttonStyle(.plain)
-                                        
-                                        // Volume Control
-                                        VStack(spacing: 5) {
-                                            Image(systemName: wallpaperManager.volume > 0 ? "speaker.wave.2.fill" : "speaker.slash.fill")
-                                                .font(.caption)
-                                                .foregroundColor(.secondary)
-                                            
-                                            Slider(value: $wallpaperManager.volume, in: 0...1)
-                                                .tint(.blue)
-                                                .frame(width: 80)
-                                        }
-                                    }
-                                    .padding(.top, 5)
-                                }
-                                .padding()
-                                .frame(maxWidth: .infinity)
-                                .background(Color.black.opacity(0.05))
-                                .cornerRadius(12)
-                            } else {
-                                VStack(spacing: 10) {
-                                    Image(systemName: "photo.on.rectangle.angled")
-                                        .font(.system(size: 36))
-                                        .foregroundStyle(.secondary.opacity(0.5))
-                                    
-                                    Text("No Wallpaper")
-                                        .font(.subheadline)
-                                        .foregroundStyle(.secondary)
-                                }
-                                .padding()
-                                .frame(maxWidth: .infinity)
-                            }
+                            Spacer()
                             
                             Button(action: {
-                                showingImporter = true
-                            }) {
-                                HStack {
-                                    Image(systemName: "plus.circle.fill")
-                                    Text("Import")
+                                withAnimation {
+                                    isSidebarExpanded.toggle()
                                 }
-                                .font(.system(size: 15, weight: .semibold))
-                                .foregroundColor(.white)
-                                .padding(.vertical, 10)
-                                .padding(.horizontal, 20)
-                                .background(
-                                    LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.8), Color.purple.opacity(0.8)]), startPoint: .leading, endPoint: .trailing)
-                                )
-                                .clipShape(Capsule())
-                                .shadow(color: Color.blue.opacity(0.3), radius: 5, x: 0, y: 3)
+                            }) {
+                                Image(systemName: "sidebar.left")
+                                    .foregroundColor(.white.opacity(0.7))
                             }
                             .buttonStyle(.plain)
-                            .fileImporter(isPresented: $showingImporter,
-                                          allowedContentTypes: [.movie, .video],
-                                          allowsMultipleSelection: false) { result in
-                                switch result {
-                                case .success(let urls):
-                                    guard let url = urls.first else { return }
-                                    // Try to access security scope if possible, ignore result if not applicable
-                                    _ = url.startAccessingSecurityScopedResource()
-                                    withAnimation {
-                                        wallpaperManager.setWallpaper(url: url)
+                        }
+                        .padding(.top, 20)
+                        .padding(.horizontal)
+                        
+                        // Main Action Card
+                        GlassCard {
+                            VStack(spacing: 15) {
+                                if let currentURL = wallpaperManager.currentWallpaperURL {
+                                    VStack(spacing: 8) {
+                                        Image(systemName: "film.fill")
+                                            .font(.system(size: 24))
+                                            .foregroundStyle(.secondary)
+                                        
+                                        Text(currentURL.lastPathComponent)
+                                            .font(.caption)
+                                            .foregroundStyle(.secondary)
+                                            .multilineTextAlignment(.center)
+                                            .lineLimit(2)
+                                        
+                                        // Playback Controls
+                                        HStack(spacing: 20) {
+                                            Button(action: {
+                                                withAnimation {
+                                                    wallpaperManager.isPlaying.toggle()
+                                                }
+                                            }) {
+                                                Image(systemName: wallpaperManager.isPlaying ? "pause.circle.fill" : "play.circle.fill")
+                                                    .font(.system(size: 40))
+                                                    .foregroundColor(.blue.opacity(0.8))
+                                            }
+                                            .buttonStyle(.plain)
+                                            
+                                            // Volume Control
+                                            VStack(spacing: 5) {
+                                                Image(systemName: wallpaperManager.volume > 0 ? "speaker.wave.2.fill" : "speaker.slash.fill")
+                                                    .font(.caption)
+                                                    .foregroundColor(.secondary)
+                                                
+                                                Slider(value: $wallpaperManager.volume, in: 0...1)
+                                                    .tint(.blue)
+                                                    .frame(width: 80)
+                                            }
+                                        }
+                                        .padding(.top, 5)
                                     }
-                                case .failure(let error):
-                                    print("Import failed: \(error.localizedDescription)")
+                                    .padding()
+                                    .frame(maxWidth: .infinity)
+                                    .background(Color.black.opacity(0.05))
+                                    .cornerRadius(12)
+                                } else {
+                                    VStack(spacing: 10) {
+                                        Image(systemName: "photo.on.rectangle.angled")
+                                            .font(.system(size: 36))
+                                            .foregroundStyle(.secondary.opacity(0.5))
+                                        
+                                        Text("No Wallpaper")
+                                            .font(.subheadline)
+                                            .foregroundStyle(.secondary)
+                                    }
+                                    .padding()
+                                    .frame(maxWidth: .infinity)
+                                }
+                                
+                                Button(action: {
+                                    showingImporter = true
+                                }) {
+                                    HStack {
+                                        Image(systemName: "plus.circle.fill")
+                                        Text("Import")
+                                    }
+                                    .font(.system(size: 15, weight: .semibold))
+                                    .foregroundColor(.white)
+                                    .padding(.vertical, 10)
+                                    .padding(.horizontal, 20)
+                                    .background(
+                                        LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.8), Color.purple.opacity(0.8)]), startPoint: .leading, endPoint: .trailing)
+                                    )
+                                    .clipShape(Capsule())
+                                    .shadow(color: Color.blue.opacity(0.3), radius: 5, x: 0, y: 3)
+                                }
+                                .buttonStyle(.plain)
+                                .fileImporter(isPresented: $showingImporter,
+                                              allowedContentTypes: [.movie, .video],
+                                              allowsMultipleSelection: false) { result in
+                                    switch result {
+                                    case .success(let urls):
+                                        guard let url = urls.first else { return }
+                                        // Try to access security scope if possible, ignore result if not applicable
+                                        _ = url.startAccessingSecurityScopedResource()
+                                        withAnimation {
+                                            wallpaperManager.setWallpaper(url: url)
+                                        }
+                                    case .failure(let error):
+                                        print("Import failed: \(error.localizedDescription)")
+                                    }
                                 }
                             }
+                            .padding()
                         }
-                        .padding()
-                    }
-                    .frame(width: 260)
-                    
-                    Spacer()
-                    
-                    // Settings Button
-                    Button(action: {
-                        withAnimation(.spring()) {
-                            showingSettings = true
-                        }
-                    }) {
-                        HStack {
-                            Image(systemName: "gearshape.fill")
-                            Text("Settings")
-                        }
-                        .foregroundColor(.white.opacity(0.8))
-                        .padding(.bottom, 20)
-                    }
-                    .buttonStyle(.plain)
-                }
-                .frame(width: 300)
-                .background(Color.black.opacity(0.15)) // Sidebar separator
-                .transition(.move(edge: .leading))
-            }
-            
-            // MARK: - RIGHT CONTENT: Library Grid
-            VStack(alignment: .leading, spacing: 15) {
-                HStack {
-                    if !isSidebarExpanded {
+                        .frame(width: 260)
+                        
+                        Spacer()
+                        
+                        // Settings Button
                         Button(action: {
-                            withAnimation {
-                                isSidebarExpanded.toggle()
+                            withAnimation(.spring()) {
+                                showingSettings = true
                             }
                         }) {
-                            Image(systemName: "sidebar.left")
-                                .font(.title2)
-                                .foregroundColor(.white.opacity(0.9))
+                            HStack {
+                                Image(systemName: "gearshape.fill")
+                                Text("Settings")
+                            }
+                            .foregroundColor(.white.opacity(0.8))
+                            .padding(.bottom, 20)
                         }
                         .buttonStyle(.plain)
-                        .padding(.leading, 20)
                     }
-                    
-                    Text("Library")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white.opacity(0.9))
-                        .padding(.horizontal, isSidebarExpanded ? 20 : 0)
-                    
-                    Spacer()
+                    .frame(width: 300)
+                    .background(Color.black.opacity(0.15)) // Sidebar separator
+                    .transition(.move(edge: .leading))
                 }
-                .padding(.top, 30)
                 
-                if wallpaperManager.history.isEmpty {
-                    VStack {
+                // MARK: - RIGHT CONTENT: Library Grid
+                VStack(alignment: .leading, spacing: 15) {
+                    HStack {
+                        if !isSidebarExpanded {
+                            Button(action: {
+                                withAnimation {
+                                    isSidebarExpanded.toggle()
+                                }
+                            }) {
+                                Image(systemName: "sidebar.left")
+                                    .font(.title2)
+                                    .foregroundColor(.white.opacity(0.9))
+                            }
+                            .buttonStyle(.plain)
+                            .padding(.leading, 20)
+                        }
+                        
+                        Text("Library")
+                            .font(.title3)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white.opacity(0.9))
+                            .padding(.horizontal, isSidebarExpanded ? 20 : 0)
+                        
                         Spacer()
-                        Image(systemName: "square.stack.3d.up.slash")
+                    }
+                    .padding(.top, 30)
+                    
+                    if wallpaperManager.history.isEmpty {
+                        VStack {
+                            Spacer()
+                            Image(systemName: "square.stack.3d.up.slash")
                             .font(.system(size: 40))
                             .foregroundColor(.white.opacity(0.3))
                             .padding(.bottom, 10)
-                        Text("No wallpapers imported yet")
-                            .foregroundColor(.white.opacity(0.5))
-                        Spacer()
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                } else {
-                    ScrollView(.vertical, showsIndicators: true) {
-                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 140, maximum: 180), spacing: 15)], spacing: 15) {
-                            ForEach(wallpaperManager.history) { item in
-                                HistoryItemView(item: item, isSelected: wallpaperManager.currentWallpaperURL?.path == item.url.path)
-                                    .onTapGesture {
-                                        withAnimation {
-                                            wallpaperManager.setWallpaper(url: item.url)
-                                        }
-                                    }
-                                    .contextMenu {
-                                        Button(role: .destructive) {
-                                            withAnimation {
-                                                wallpaperManager.removeFromHistory(id: item.id)
-                                            }
-                                        } label: {
-                                            Label("Remove", systemImage: "trash")
-                                        }
-                                    }
-                            }
+                            Text("No wallpapers imported yet")
+                                .foregroundColor(.white.opacity(0.5))
+                            Spacer()
                         }
-                        .padding(.horizontal, 20)
-                        .padding(.bottom, 20)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    } else {
+                        ScrollView(.vertical, showsIndicators: true) {
+                            LazyVGrid(columns: [GridItem(.adaptive(minimum: 140, maximum: 180), spacing: 15)], spacing: 15) {
+                                ForEach(wallpaperManager.history) { item in
+                                    HistoryItemView(item: item, isSelected: wallpaperManager.currentWallpaperURL?.path == item.url.path)
+                                        .onTapGesture {
+                                            withAnimation {
+                                                wallpaperManager.setWallpaper(url: item.url)
+                                            }
+                                        }
+                                        .contextMenu {
+                                            Button(role: .destructive) {
+                                                withAnimation {
+                                                    wallpaperManager.removeFromHistory(id: item.id)
+                                                }
+                                            } label: {
+                                                Label("Remove", systemImage: "trash")
+                                            }
+                                        }
+                                }
+                            }
+                            .padding(.horizontal, 20)
+                            .padding(.bottom, 20)
+                        }
                     }
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity) // Ensure it fills the space
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity) // Ensure it fills the space
-        }
-        .frame(minWidth: 600, maxWidth: .infinity, minHeight: 400, maxHeight: .infinity)
-        .background(
-            ZStack {
-                // Background Layer (Color base to prevent transparency issues)
-                Color.black.ignoresSafeArea()
-                
-                // Animated Liquid Background or API Image
-                if let customImage = wallpaperManager.customBackgroundImage {
-                    GeometryReader { geo in
-                        Image(nsImage: customImage)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: geo.size.width, height: geo.size.height)
-                            .clipped()
+            .frame(minWidth: 600, maxWidth: .infinity, minHeight: 400, maxHeight: .infinity)
+            .background(
+                ZStack {
+                    // Background Layer (Color base to prevent transparency issues)
+                    Color.black.ignoresSafeArea()
+                    
+                    // Animated Liquid Background or API Image
+                    if let customImage = wallpaperManager.customBackgroundImage {
+                        GeometryReader { geo in
+                            Image(nsImage: customImage)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: geo.size.width, height: geo.size.height)
+                                .clipped()
+                                // Added animation for smooth transition
+                                .transition(.opacity)
+                                .id(customImage) // Force view update when image changes
+                        }
+                        .ignoresSafeArea()
+                    } else {
+                        LiquidBackground()
+                            .ignoresSafeArea()
                     }
-                    .ignoresSafeArea()
-                } else {
-                    LiquidBackground()
+                    
+                    // Visual Effect Blur on top of background
+                    // Reduced blur slightly so the image is more visible
+                    // Use a slightly more transparent material or control opacity
+                    VisualEffectBlur(material: .hudWindow, blendingMode: .behindWindow)
+                        .ignoresSafeArea()
+                        .allowsHitTesting(false) // Let clicks pass through to background drag handler or UI
+                        .opacity(wallpaperManager.backgroundBlurOpacity)
+                    
+                    // Dark Overlay
+                    Color.black.opacity(wallpaperManager.backgroundOverlayOpacity)
+                        .ignoresSafeArea()
+                        .allowsHitTesting(false)
+                    
+                    // Window Drag Handler
+                    WindowDragHandler()
                         .ignoresSafeArea()
                 }
-                
-                // Visual Effect Blur on top of background
-                VisualEffectBlur(material: .hudWindow, blendingMode: .behindWindow)
-                    .ignoresSafeArea()
-                    .allowsHitTesting(false) // Let clicks pass through to background drag handler or UI
-                
-                // Window Drag Handler
-                WindowDragHandler()
-                    .ignoresSafeArea()
-            }
-        )
-        .clipped() // Prevent any background from overflowing the actual window frame
-        
-        // Custom Settings Overlay
-        if showingSettings {
-            ZStack {
-                Color.black.opacity(0.01) // Nearly invisible background to catch clicks
-                    .ignoresSafeArea()
-                    .onTapGesture {
-                        withAnimation(.spring()) {
-                            showingSettings = false
+                .animation(.easeInOut(duration: 0.5), value: wallpaperManager.customBackgroundImage)
+            )
+            .clipped() // Prevent any background from overflowing the actual window frame
+            
+            // Custom Settings Overlay
+            if showingSettings {
+                ZStack {
+                    Color.black.opacity(0.01) // Nearly invisible background to catch clicks
+                        .ignoresSafeArea()
+                        .onTapGesture {
+                            withAnimation(.spring()) {
+                                showingSettings = false
+                            }
                         }
-                    }
-                
-                SettingsView(isPresented: $showingSettings)
-                    .frame(width: 320, height: 350)
-                    .background(VisualEffectBlur(material: .popover, blendingMode: .behindWindow))
-                    .cornerRadius(16)
-                    .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(Color.white.opacity(0.2), lineWidth: 1)
-                    )
-                    .transition(.scale(scale: 0.9).combined(with: .opacity))
+                    
+                    SettingsView(isPresented: $showingSettings)
+                        .frame(width: 320, height: 350)
+                        .background(VisualEffectBlur(material: .popover, blendingMode: .behindWindow))
+                        .cornerRadius(16)
+                        .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(Color.white.opacity(0.2), lineWidth: 1)
+                        )
+                        .transition(.scale(scale: 0.9).combined(with: .opacity))
+                }
+                .zIndex(100) // Ensure it's on top of everything
             }
-            .zIndex(100) // Ensure it's on top of everything
         }
     }
 }
@@ -447,6 +461,11 @@ struct VisualEffectBlur: NSViewRepresentable {
         visualEffectView.material = material
         visualEffectView.blendingMode = blendingMode
         visualEffectView.state = .active
+        visualEffectView.autoresizingMask = [.width, .height]
+        
+        // This is crucial: if we use a background image, we need to allow it to show through.
+        // For some materials, macOS makes it completely opaque.
+        // We'll set an alpha value if needed, or rely on specific materials.
         return visualEffectView
     }
     

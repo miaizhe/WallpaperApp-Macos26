@@ -1,0 +1,46 @@
+{
+  "" : {
+    "const-values" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/DynamicWallpaperApp-primary.swiftconstvalues",
+    "dependencies" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/DynamicWallpaperApp-primary.d",
+    "diagnostics" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/DynamicWallpaperApp-primary.dia",
+    "emit-module-dependencies" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/DynamicWallpaperApp-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/DynamicWallpaperApp-primary-emit-module.dia",
+    "pch" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/DynamicWallpaperApp-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/DynamicWallpaperApp-primary.swiftdeps"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/DerivedSources/resource_bundle_accessor.swift" : {
+    "index-unit-output-path" : "/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/resource_bundle_accessor.o",
+    "llvm-bc" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/resource_bundle_accessor.bc",
+    "object" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/resource_bundle_accessor.o"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/Sources/ContentView.swift" : {
+    "index-unit-output-path" : "/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/ContentView.o",
+    "llvm-bc" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/ContentView.bc",
+    "object" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/ContentView.o"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/Sources/DynamicWallpaperApp.swift" : {
+    "index-unit-output-path" : "/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/DynamicWallpaperApp.o",
+    "llvm-bc" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/DynamicWallpaperApp.bc",
+    "object" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/DynamicWallpaperApp.o"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/Sources/SettingsView.swift" : {
+    "index-unit-output-path" : "/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/SettingsView.o",
+    "llvm-bc" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/SettingsView.bc",
+    "object" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/SettingsView.o"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/Sources/StatusBarController.swift" : {
+    "index-unit-output-path" : "/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/StatusBarController.o",
+    "llvm-bc" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/StatusBarController.bc",
+    "object" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/StatusBarController.o"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/Sources/WallpaperManager.swift" : {
+    "index-unit-output-path" : "/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/WallpaperManager.o",
+    "llvm-bc" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/WallpaperManager.bc",
+    "object" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/WallpaperManager.o"
+  },
+  "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/Sources/WallpaperWindow.swift" : {
+    "index-unit-output-path" : "/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/WallpaperWindow.o",
+    "llvm-bc" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/WallpaperWindow.bc",
+    "object" : "/Users/wuxi/Desktop/wall/DynamicWallpaperApp/.build/apple/Intermediates.noindex/DynamicWallpaperApp.build/Release/DynamicWallpaperApp.build/Objects-normal/x86_64/WallpaperWindow.o"
+  }
+}

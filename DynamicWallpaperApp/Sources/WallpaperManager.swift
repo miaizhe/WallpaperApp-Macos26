@@ -36,7 +36,19 @@ class WallpaperManager: ObservableObject {
             UserDefaults.standard.set(cardOpacity, forKey: "cardOpacity")
         }
     }
+    @Published var backgroundBlurOpacity: Double = 0.7 {
+        didSet {
+            UserDefaults.standard.set(backgroundBlurOpacity, forKey: "backgroundBlurOpacity")
+        }
+    }
+    @Published var backgroundOverlayOpacity: Double = 0.2 {
+        didSet {
+            UserDefaults.standard.set(backgroundOverlayOpacity, forKey: "backgroundOverlayOpacity")
+        }
+    }
     @Published var customBackgroundImage: NSImage? = nil
+    @Published var isLoadingBackground: Bool = false
+    @Published var backgroundError: String? = nil
     
     // Thumbnail Cache
     var thumbnailCache: [UUID: NSImage] = [:]
@@ -56,6 +68,8 @@ class WallpaperManager: ObservableObject {
         self.volume = UserDefaults.standard.float(forKey: "wallpaperVolume")
         self.backgroundApiUrl = UserDefaults.standard.string(forKey: "backgroundApiUrl") ?? "https://picsum.photos/1920/1080"
         self.cardOpacity = UserDefaults.standard.object(forKey: "cardOpacity") as? Double ?? 0.5
+        self.backgroundBlurOpacity = UserDefaults.standard.object(forKey: "backgroundBlurOpacity") as? Double ?? 0.7
+        self.backgroundOverlayOpacity = UserDefaults.standard.object(forKey: "backgroundOverlayOpacity") as? Double ?? 0.2
         
         // Fetch background if API URL is set
         if !backgroundApiUrl.isEmpty {
@@ -64,21 +78,73 @@ class WallpaperManager: ObservableObject {
     }
     
     func fetchCustomBackground() {
-        guard let url = URL(string: backgroundApiUrl) else { return }
+        guard var components = URLComponents(string: backgroundApiUrl) else {
+            self.backgroundError = "Invalid URL"
+            return
+        }
         
-        URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+        // Add a random query parameter to bypass cache
+        var queryItems = components.queryItems ?? []
+        queryItems.append(URLQueryItem(name: "t", value: "\(Date().timeIntervalSince1970)"))
+        components.queryItems = queryItems
+        
+        guard let url = components.url else { return }
+        
+        DispatchQueue.main.async {
+            self.isLoadingBackground = true
+            self.backgroundError = nil
+        }
+        
+        // Use a proper configuration
+        let config = URLSessionConfiguration.default
+        config.requestCachePolicy = .reloadIgnoringLocalCacheData
+        config.timeoutIntervalForRequest = 30 // Set a reasonable timeout
+        let session = URLSession(configuration: config)
+        
+        let task = session.dataTask(with: url) { [weak self] data, response, error in
+            DispatchQueue.main.async {
+                self?.isLoadingBackground = false
+            }
+            
             if let error = error {
                 print("Failed to fetch background: \(error)")
+                DispatchQueue.main.async {
+                    self?.backgroundError = "Network error: \(error.localizedDescription)"
+                }
                 return
             }
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                print("Invalid response")
+                DispatchQueue.main.async {
+                    self?.backgroundError = "Invalid server response"
+                }
+                return
+            }
+            
+            guard (200...299).contains(httpResponse.statusCode) else {
+                print("Server returned status code: \(httpResponse.statusCode)")
+                DispatchQueue.main.async {
+                    self?.backgroundError = "Server Error: \(httpResponse.statusCode)"
+                }
+                return
+            }
+            
             guard let data = data, let image = NSImage(data: data) else { 
-                print("Invalid image data received")
+                print("Invalid image data received. Data size: \(data?.count ?? 0)")
+                DispatchQueue.main.async {
+                    self?.backgroundError = "Invalid image data"
+                }
                 return 
             }
+            
             DispatchQueue.main.async {
                 self?.customBackgroundImage = image
+                self?.backgroundError = nil
+                print("Successfully updated background image from \(url.absoluteString)")
             }
-        }.resume()
+        }
+        task.resume()
     }
     
     func getThumbnail(for item: WallpaperItem, completion: @escaping (NSImage?) -> Void) {

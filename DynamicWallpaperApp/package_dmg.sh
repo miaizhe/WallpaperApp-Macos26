@@ -60,9 +60,22 @@ cat > "$APP_BUNDLE/Contents/Info.plist" <<EOF
     <false/>
     <key>CFBundleIconFile</key>
     <string>AppIcon</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>
 EOF
+
+echo "🔐 Signing App Bundle..."
+# Sign with entitlements if available
+if [ -f "Entitlements.plist" ]; then
+    codesign --force --deep --options runtime --entitlements Entitlements.plist --sign - "$APP_BUNDLE"
+else
+    codesign --force --deep --options runtime --sign - "$APP_BUNDLE"
+fi
 
 echo "✅ App Bundle Created: $APP_BUNDLE"
 

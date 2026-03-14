@@ -24,3 +24,5 @@
 "App Background" = "应用背景";
 "Background Image API URL" = "背景图片 API 地址";
 "Refresh Background" = "刷新背景";
+"Background Blur" = "背景模糊度";
+"Background Dim" = "背景遮罩度";
